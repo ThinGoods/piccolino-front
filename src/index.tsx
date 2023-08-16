@@ -1,3 +1,12 @@
+import './assets/fonts/Monserrat/static/Montserrat-Black.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-Bold.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-ExtraBold.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-ExtraLight.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-Light.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-Medium.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-Regular.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-SemiBold.ttf'
+import './assets/fonts/Monserrat/static/Montserrat-Thin.ttf'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';

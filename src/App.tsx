@@ -1,9 +1,14 @@
+import styled from "styled-components";
+import { font } from "./utils/styles";
+
 function App() {
   return (
-    <div>
+    <Container>
       Sono nato
-    </div>
+    </Container>
   );
 }
-
+const Container = styled.div`
+  
+`
 export default App;
