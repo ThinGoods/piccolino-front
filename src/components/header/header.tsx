@@ -16,7 +16,7 @@ export const Header = (props: IHeaderProps) => {
         </S.IconBox>
 
         <S.Content>
-          <S.TopContent withMarginTop={props.showMenu}>
+          <S.TopContent withMarginTop={props.showMenu} >
             <S.Geolocation>
               <S.GeolocationItem>
                 <S.Icon src={iconLogo} />

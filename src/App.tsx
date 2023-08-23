@@ -1,24 +1,21 @@
 import styled from "styled-components";
 import { Header } from "./components/header/header";
+import {colors} from "./utils/colors"
+import { Greeting_page} from "./components/greeting_page/greeting_page"
+import { S } from "./App.styles";
 
 function App() {
-  const fakeDivStyles = {
-    minHeight: '100vh',
-    width: '100%',
-    backgroundColor: 'red',
-  }
 
   return (
-    <Container>
+    <S.Container>
       <Header showMenu={true} />
-      <div style={fakeDivStyles} />
+      <S.HeaderSpacing/>
+      <Greeting_page />
+
+
       <Header showMenu={false} />
-    </Container>
+    </S.Container>
   );
 }
 
-const Container = styled.div`
-  width: 100%;
-  min-height: 1080px;
-`
 export default App;
