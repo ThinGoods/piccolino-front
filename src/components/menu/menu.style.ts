@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { colors } from "../../utils/colors"
 import { flex, font } from "../../utils/styles"
 
 const MenuContainer = styled.div`
@@ -17,7 +18,7 @@ const MenuItem = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: #FFCB00;
+    background-color: ${colors.yellow};
   }
 `
 

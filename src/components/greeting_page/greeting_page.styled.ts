@@ -28,8 +28,8 @@ const TitleContainer = styled.div`
 `
 
 const Discription = styled.div`
-    ${font("dark", 24, 400)}
-    padding-bottom: 27px;
+  ${font("dark", 24, 400)}
+  padding-bottom: 27px;
 `
 
 const CofeButton = styled.div`

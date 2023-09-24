@@ -11,7 +11,6 @@ const Container = styled.div`
 `
 const HeaderSpacing = styled.div`
   min-height: ${HeaderHeight}px;
-  /* background-color: red; */
 `
 export const S = {
     Container,
