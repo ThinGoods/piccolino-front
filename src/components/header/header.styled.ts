@@ -2,6 +2,8 @@ import styled from "styled-components"
 import { flex, font } from "../../utils/styles"
 import { ITopContentProps } from "./header.types"
 import { colors } from "../../utils/colors"
+import { HeaderHeight, headerPercentWidth } from "../../utils/constants"
+
 
 const IconBox = styled.div`
   margin-right: 24px;
@@ -11,7 +13,7 @@ const IconContainer = styled.img`
 `
 
 const Layout = styled.div <{ isFixed: boolean }>`
-height: 160px;
+height: ${HeaderHeight}px;
 width: 100%;
 background-color: ${colors.light};
 ${props => (props.isFixed ? `
@@ -25,7 +27,7 @@ ${flex()}
 
 const Container = styled.div`
   height: 100%;
-  width: 75%;
+  width: ${headerPercentWidth}%;
   ${flex()}
 `
 
@@ -39,7 +41,6 @@ const TopContent = styled.div<ITopContentProps>`
   width: 100%;
   margin-top: ${props => (props.withMarginTop ? 24 : 0)} px;
   ${flex('row', 'center', 'space-between')}
-
 `
 
 const Geolocation = styled.div`
