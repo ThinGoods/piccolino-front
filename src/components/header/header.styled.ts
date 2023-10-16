@@ -13,70 +13,51 @@ const IconContainer = styled.img`
 `
 
 const Layout = styled.div <{ isFixed: boolean }>`
-height: ${HeaderHeight}px;
-width: 100%;
-background-color: ${colors.light};
-${props => (props.isFixed ? `
-  position:fixed; 
-  z-index: 20;
-`: '')};
-
-box-shadow: 0px 10px 25px 0px ${colors.dark}20 ;
-${flex()}
+  ${props => (props.isFixed ? `
+    position:fixed; 
+    z-index: 20;
+  `: '')};
+  ${flex()}
+  height: ${HeaderHeight}px;
+  width: 100%;
+  background-color: ${colors.light};
+  box-shadow: 0px 10px 25px 0px ${colors.dark}20 ;
 `
-
 const Container = styled.div`
+  ${flex()}
   height: 100%;
   width: ${headerPercentWidth}%;
-  ${flex()}
 `
-
 const Content = styled.div`
+  ${flex('column', 'center', 'space-around')}
   height: 100%;
   width: 100%;
-  ${flex('column', 'center', 'space-around')}
 `
-
 const TopContent = styled.div<ITopContentProps>`
-  width: 100%;
+  ${flex('row', 'center', 'space-between')}
   margin-top: ${props => (props.withMarginTop ? 24 : 0)} px;
-  ${flex('row', 'center', 'space-between')}
+  width: 100%;
 `
-
 const Geolocation = styled.div`
-width: 57%;
-  ${flex('row', 'center', 'flex-start')}
-  
-`
-
-const GeolocationItem = styled.div`
-  ${flex('row', 'center', 'space-between')}
-`
-
-const Icon = styled.img`
-  margin-right: 19px;
-`
-
-const Addres = styled.div`
-  ${font('dark', 14, 600)}
+  ${flex('row', 'center', 'flex-start')};
+  width: 57%;
 `
 const Contacts = styled.div`
+  ${flex('row', 'center', 'space-between')};
   width: 43%;
-  ${flex('row', 'center', 'space-between')}
-  
 `
 const Menu = styled.div``
 const ContactIconsContainer = styled.div`
-  ${flex('row', 'center', 'space-between')}
+  ${flex('row', 'center', 'space-between')};
 `
 const SocialIcon = styled.img`
   padding: 5px;
 `
 const ContactPhone = styled.div`
-  ${font('dark', 18, 600)}
+  ${font('dark', 18, 600)};
 `
 const ContactEmail = styled.div`
-  ${font('dark', 16, 500)}
+  ${font('dark', 16, 500)};
 `
 const Divider = styled.div`
   width: 40px;
@@ -89,9 +70,6 @@ export const S = {
   Content,
   TopContent,
   Geolocation,
-  GeolocationItem,
-  Icon,
-  Addres,
   Contacts,
   Menu,
   ContactIconsContainer,
