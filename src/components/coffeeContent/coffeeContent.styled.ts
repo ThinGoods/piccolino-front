@@ -1,6 +1,6 @@
 import styled from "styled-components"
+import { flex, font } from "../../utils/styles"
 import { headerPercentWidth } from "../../utils/constants"
-import { font, flex } from "../../utils/styles"
 
 const Content = styled.div`
   ${flex('column', 'center', 'space-between')}
@@ -13,14 +13,9 @@ const Title = styled.div`
 const Description = styled.div`
   ${font("dark", 16, 400)}
 `
-const CoffeeItemContainer = styled.div`
-  ${flex('row', 'center', 'space-between')}
-  flex-wrap: wrap;
-  width: 100%;
-` 
+
 export const S = {
-  Content,
-  Title,
-  Description,
-  CoffeeItemContainer
-}
+    Content,
+    Title,
+    Description,
+  }

@@ -1,11 +1,11 @@
 import { S } from "./header.styled"
 import { IHeaderProps } from "./header.types"
 import mainLogo from '../../assets/imgs/mainLogo.png'
-import iconLogo from '../../assets/icons/gps.svg'
 import telegramIcon from '../../assets/icons/telegramIcon.svg'
 import viberIcon from '../../assets/icons/viberIcon.svg'
 import whatsupIcon from '../../assets/icons/whatsappIcon.svg'
 import { Menu } from '../menu/menu'
+import { AddresLine } from "../addresLine/addresLine"
 
 export const Header = (props: IHeaderProps) => {
   return (
@@ -18,16 +18,10 @@ export const Header = (props: IHeaderProps) => {
         <S.Content>
           <S.TopContent withMarginTop={props.showMenu} >
             <S.Geolocation>
-              <S.GeolocationItem>
-                <S.Icon src={iconLogo} />
-                <S.Addres> вул. Збройних Сил України 51В </S.Addres>
-              </S.GeolocationItem>
+              <AddresLine addres="вул. Збройних Сил України 51В" />
               <S.Divider />
 
-              <S.GeolocationItem>
-                <S.Icon src={iconLogo} />
-                <S.Addres> вул. Героїв Крут 1/3 (Епіцентр) </S.Addres>
-              </S.GeolocationItem>
+              <AddresLine addres="вул. Героїв Крут 1/3 (Епіцентр)" />
             </S.Geolocation>
 
             <S.Contacts>

@@ -2,6 +2,9 @@ import styled from "styled-components"
 import { colors } from "../../utils/colors"
 import { flex, font } from "../../utils/styles"
 
+const Wraper = styled.div`
+  ${flex('column')}
+`
 const Content = styled.div`
   ${flex('column', 'center', 'center')}
   background-color: ${colors.light};
@@ -67,6 +70,7 @@ const OrderBox = styled.div`
   }
 `
 export const S = {
+  Wraper,
   Content,
   Image,
   Description,
