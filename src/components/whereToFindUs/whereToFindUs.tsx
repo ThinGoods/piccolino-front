@@ -3,8 +3,25 @@ import busPhoto from "../../assets/imgs/busPhoto.png"
 import { Spacer } from "../spacer/spacer"
 import { AddresLine } from "../addresLine/addresLine"
 import { Button } from "../button/button"
+import { addresses } from "../../utils/data"
 
 export const WhereToFindUs = () => {
+  const openNewTab = (link: string) => {
+    window.open(link, '_blank')?.focus();
+    console.log(link);
+  }
+
+  const handleOpenLocationEpicentr = () => {
+    openNewTab(addresses.epicentr.mapUrl);
+  }
+  const handleOpenLocationZSU = () => {
+    openNewTab(addresses.zsu.mapUrl);
+  }
+
+  // const handleOpenLocation = (url: string) => () => {
+  //   openNewTab(url);
+  // }
+
   return (
     <S.Wrapper>
       <S.Container>
@@ -22,16 +39,22 @@ export const WhereToFindUs = () => {
             <Spacer size={30} />
             <S.LocationContainer>
               <S.AddressContainer>
-                <AddresLine addres="вул. Збройних Сил України 51В"/>
+                <AddresLine addres={addresses.epicentr.localStreet}/>
                 <Spacer size={30} />
-                <AddresLine addres="вул. Героїв Крут 1/3 (Епіцентр)"/>
+                <AddresLine addres={addresses.zsu.localStreet}/>
               </S.AddressContainer>
               <Spacer size={35} />
 
               <S.MapButtonContainer>
-                <Button text="Показати на мапі"/>
+                <Button text="Показати на мапі" onClick={handleOpenLocationEpicentr}/>
                 <Spacer size={30} />
-                <Button text="Показати на мапі"/>
+                {/* @ts-ignore */}
+                <Button text="Показати на мапі" onClick={handleOpenLocationZSU}/>
+
+                {/* <Spacer size={30} />
+                <Button text="Показати на мапі" onClick={handleOpenLocation(addresses.epicentr.mapUrl)} />
+                <Spacer size={30} />
+                <Button text="Показати на мапі" onClick={handleOpenLocation(addresses.zsu.mapUrl)} /> */}
               </S.MapButtonContainer>
             </S.LocationContainer>
             
