@@ -6,6 +6,10 @@ import { partnersCoffeeList } from "../../utils/data"
 import { Button } from "../button/button"
 
 export const PartnersCoffee = () => {
+  const handleShowMore = () => {
+    console.log('tyt blyat bydyt pokazuvatsya nowui cofe');
+  }
+
   return (
     <S.Content>
 
@@ -21,9 +25,12 @@ export const PartnersCoffee = () => {
       </S.CoffeeItemContainer>
       <Spacer size={68} />
 
-      <Button text="Завантажити більше" withTouchableArea={true}/>
+      <Button 
+        text="Завантажити більше" 
+        withTouchableArea={true}
+        onClick={handleShowMore}
+      />
       {/* <Button text="Завантажити більше" withTouchableArea/> --- TRUE also BE transmited */}
-
     </S.Content>
   )
 }

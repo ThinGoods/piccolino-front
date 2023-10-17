@@ -6,6 +6,7 @@ import viberIcon from '../../assets/icons/viberIcon.svg'
 import whatsupIcon from '../../assets/icons/whatsappIcon.svg'
 import { Menu } from '../menu/menu'
 import { AddresLine } from "../addresLine/addresLine"
+import { addresses } from "../../utils/data"
 
 export const Header = (props: IHeaderProps) => {
   return (
@@ -18,10 +19,10 @@ export const Header = (props: IHeaderProps) => {
         <S.Content>
           <S.TopContent withMarginTop={props.showMenu} >
             <S.Geolocation>
-              <AddresLine addres="вул. Збройних Сил України 51В" />
+              <AddresLine addres={addresses.zsu.localStreet} />
               <S.Divider />
 
-              <AddresLine addres="вул. Героїв Крут 1/3 (Епіцентр)" />
+              <AddresLine addres={addresses.epicentr.localStreet} />
             </S.Geolocation>
 
             <S.Contacts>

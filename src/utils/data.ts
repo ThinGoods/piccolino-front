@@ -2,6 +2,18 @@ import gonduras250 from '../assets/imgs/gonduras250.png'
 import gonduras1000 from '../assets/imgs/gonduras1000.png'
 import ethiopia250 from '../assets/imgs/ethiopia250.png'
 import kostaRica250 from '../assets/imgs/kostaRica250.png'
+import { IAdresses, ICoffeeItem } from './data.types'
+
+export const addresses: IAdresses = {
+  zsu: {
+    mapUrl: 'https://maps.app.goo.gl/p5HyAnebDEKj4HF67',
+    localStreet: 'вул. Збройних Сил України 51В',
+  },
+  epicentr: {
+    mapUrl: 'https://maps.app.goo.gl/8yRBWokFB4FJPrzh9',
+    localStreet: 'вул. Героїв Крут 1/3 (Епіцентр)',
+  }
+}
 
 export const coffeeItem: ICoffeeItem = {
   id: 1,
@@ -78,7 +90,7 @@ export const coffeeItem5: ICoffeeItem = {
   weight: 250,
 };
 
-export const ourCoffeeList = [coffeeItem, coffeeItem2, coffeeItem3, coffeeItem4, coffeeItem5]
+export const ourCoffeeList = [coffeeItem, coffeeItem2, coffeeItem3, coffeeItem4, coffeeItem5];
 
 export const coffeeItem6: ICoffeeItem = {
   id: 6,
@@ -96,20 +108,3 @@ export const coffeeItem6: ICoffeeItem = {
 };
 
 export const partnersCoffeeList = [coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6, coffeeItem6]
-
-export interface ICoffeeItem {
-  id: number;
-  img: any;
-  country: string;
-  region: string,
-  farm: string,
-  descriptors: Array<string>,
-  type: TCoffeeType,
-  processing: string,
-  roasting: string,
-  score: number,
-  price: number,
-  weight: number,
-}
-type TCoffeeType = 'мелена' | 'зерно';
-

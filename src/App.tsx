@@ -5,6 +5,7 @@ import { S } from "./App.styles";
 import { Spacer } from "./components/spacer/spacer";
 import { PartnersCoffee } from "./components/partnersCoffee/partnersCoffee";
 import { WhereToFindUs } from "./components/whereToFindUs/whereToFindUs";
+import { AboutUs } from "./components/aboutUs/aboutUs";
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
       <PartnersCoffee />
       <Spacer size={150}/>
       <WhereToFindUs />
+      <AboutUs/>
+      <Spacer size={150}/>
       <Header showMenu={false} />
     </S.Container>
   );
