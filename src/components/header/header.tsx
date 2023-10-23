@@ -31,13 +31,12 @@ export const Header = (props: IHeaderProps) => {
                 <S.SocialIcon src={viberIcon} />
                 <S.SocialIcon src={whatsupIcon} />
               </S.ContactIconsContainer>
+
               <S.ContactPhone>098 765 43 21</S.ContactPhone>
               <S.ContactEmail>andriypoznansky@gmail.com</S.ContactEmail>
             </S.Contacts>
           </S.TopContent>
           {props.showMenu ? <Menu /> : null}
-
-
         </S.Content>
       </S.Container>
     </S.Layout>

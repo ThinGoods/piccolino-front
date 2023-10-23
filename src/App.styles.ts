@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { colors } from "./utils/colors"
-import { HeaderHeight } from "./utils/constants"
+import { headerHeight } from "./utils/constants"
 import { flex } from "./utils/styles"
 
 const Container = styled.div`
@@ -10,7 +10,7 @@ const Container = styled.div`
   ${flex("column", "center", "flex-start")}
 `
 const HeaderSpacing = styled.div`
-  min-height: ${HeaderHeight}px;
+  min-height: ${headerHeight}px;
 `
 export const S = {
     Container,

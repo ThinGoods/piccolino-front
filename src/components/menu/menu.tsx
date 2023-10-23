@@ -1,4 +1,4 @@
-import { S } from "./menu.style"
+import { S } from "./menu.styled"
 import { IItem, IMenuProps} from "./menu.types"
 
 export const Menu = (props: IMenuProps) => {
