@@ -6,11 +6,12 @@ import { Spacer } from "./components/spacer/spacer";
 import { PartnersCoffee } from "./components/partnersCoffee/partnersCoffee";
 import { WhereToFindUs } from "./components/whereToFindUs/whereToFindUs";
 import { AboutUs } from "./components/aboutUs/aboutUs";
+import { InstagramPage } from "./components/instagramPage/instagramPage";
+import { rootContainerId } from "./utils/constants";
 
 function App() {
-
   return (
-    <S.Container>
+    <S.Container id={rootContainerId}>
       <Header showMenu={true} />
       <S.HeaderSpacing />
       <Greeting_page />
@@ -22,6 +23,8 @@ function App() {
       <WhereToFindUs />
       <AboutUs/>
       <Spacer size={150}/>
+      <InstagramPage />
+      <Spacer size={62}/>
       <Header showMenu={false} />
     </S.Container>
   );

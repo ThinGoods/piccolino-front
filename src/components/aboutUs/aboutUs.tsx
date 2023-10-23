@@ -10,6 +10,7 @@ export const AboutUs = () => {
       <Spacer size={30} />
       <S.Description>На високих гривах гір кругом яру зеленіє старий ліс, як зелене море, вкрите хвилями.</S.Description>
       <Spacer size={32} />
+      
       <S.Content>
         <S.Image src={andrewCoolPhoto}/>
         <S.Information>

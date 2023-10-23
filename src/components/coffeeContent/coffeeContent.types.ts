@@ -1,4 +1,4 @@
 export interface ICoffeeContentProps {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 }
