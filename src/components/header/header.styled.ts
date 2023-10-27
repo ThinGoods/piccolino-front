@@ -60,6 +60,7 @@ const ContactEmail = styled.div`
 const Divider = styled.div`
   width: 40px;
 `
+const DevelopedBy = styled.div``
 
 export const S = {
   Container,
@@ -76,4 +77,5 @@ export const S = {
   ContactEmail,
   Divider,
   Layout: Layout,
+  DevelopedBy,
 }

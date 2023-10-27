@@ -15,6 +15,9 @@ export const addresses: IAdresses = {
   }
 }
 
+export const linkedInUrl: string = 'https://www.linkedin.com/in/stas-vashchenko/';
+export const developerName: string = 'Vasya Ytkin';
+
 export const coffeeItem: ICoffeeItem = {
   id: 1,
   img: gonduras250,

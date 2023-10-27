@@ -7,7 +7,7 @@ export const useGetImageWidth = (): number => {
   const scrollBarSize = useScrollbarSize();
   const clientWidth = screenWidth - scrollBarSize.width;
   const gridContainerWidth = (clientWidth/100) * headerPercentWidth;
-  const imageWidth = gridContainerWidth / 2;
+  const imageWidth = gridContainerWidth / 4;
 
   useEffect(() => {
     const updateDimension = () => {

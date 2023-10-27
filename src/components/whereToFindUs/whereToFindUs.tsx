@@ -4,13 +4,9 @@ import { Spacer } from "../spacer/spacer"
 import { AddresLine } from "../addresLine/addresLine"
 import { Button } from "../button/button"
 import { addresses } from "../../utils/data"
+import { openNewTab } from "../../utils/navigations"
 
 export const WhereToFindUs = () => {
-
-  const openNewTab = (link: string) => {
-    window.open(link, '_blank')?.focus();
-    console.log(link);
-  }
 
   const handleOpenLocationEpicentr = () => {
     openNewTab(addresses.epicentr.mapUrl);

@@ -8,6 +8,9 @@ import { WhereToFindUs } from "./components/whereToFindUs/whereToFindUs";
 import { AboutUs } from "./components/aboutUs/aboutUs";
 import { InstagramPage } from "./components/instagramPage/instagramPage";
 import { rootContainerId } from "./utils/constants";
+import { Vacancies } from "./components/vacancies/vacancies";
+import { GoogleReviews } from "./components/googleReviews/googleReviews";
+import { DevelopedBy } from "./components/developedBy/developedBy";
 
 function App() {
   return (
@@ -25,7 +28,12 @@ function App() {
       <Spacer size={150}/>
       <InstagramPage />
       <Spacer size={62}/>
+      <Vacancies />
+      <Spacer size={54}/>
+      <GoogleReviews />
+      <Spacer size={59}/>
       <Header showMenu={false} />
+      <DevelopedBy />
     </S.Container>
   );
 }
