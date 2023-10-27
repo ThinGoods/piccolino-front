@@ -8,7 +8,7 @@ import { Button } from "../button/button"
 export const PartnersCoffee = () => {
   const handleShowMore = () => {
     console.log('tyt blyat bydyt pokazuvatsya nowui cofe');
-  }
+  };
 
   return (
     <S.Content>
@@ -21,12 +21,12 @@ export const PartnersCoffee = () => {
       <S.CoffeeItemContainer>
         {partnersCoffeeList.map((elem, index) => (
           <CoffeeItem key={index} coffeeItem={elem}/>
-        ))}
+        ))};
       </S.CoffeeItemContainer>
       <Spacer size={68} />
 
       <Button 
-        text="Завантажити більше" 
+        text="Завантажити більше"
         withTouchableArea={true}
         onClick={handleShowMore}
       />
