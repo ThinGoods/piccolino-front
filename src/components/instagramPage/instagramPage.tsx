@@ -1,4 +1,3 @@
-import { sourceImg } from "../../utils/importsOfPictures"
 import { InstagramPostsGrid } from "../instagramPostsGrid/instagramPostsGrid"
 import { Spacer } from "../spacer/spacer"
 import { S } from "./instagramPage.styled"
@@ -10,7 +9,7 @@ export const InstagramPage = () => {
       <Spacer size={70} />
 
       <S.Content>
-        <InstagramPostsGrid pictureArray={sourceImg} />
+        <InstagramPostsGrid />
       </S.Content>
     </S.Container>
   )
