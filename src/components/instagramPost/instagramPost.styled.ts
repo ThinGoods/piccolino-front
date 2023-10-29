@@ -13,6 +13,8 @@ const ImageContainer = styled.img <{ imageWidth: number }>`
      height: ${imageWidth}px;
     `
   )};
+  object-fit: cover;
+  filter: blur(0.4px);
 `
 export const S = {
   ImgBox: ImgBox,
