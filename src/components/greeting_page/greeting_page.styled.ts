@@ -1,19 +1,17 @@
 import styled from "styled-components"
 import { colors } from "../../utils/colors"
-import { headerPercentWidth } from "../../utils/constants";
+import { contentWidthSizing } from "../../utils/constants";
 import { flex, font } from "../../utils/styles"
 
 const imageHeight = 710;
 const hundredValue = 100;
-const textPartValue = 55;
+const textPartValue = 40;
 const imagePartValue = hundredValue - textPartValue;
-const imageShift = 30;
-const imageInnerPartValue = 120;
 
 const Content = styled.div`
   ${flex("row", "center", "space-around")};
   min-height: ${imageHeight}px;
-  width: ${headerPercentWidth}%;
+  ${contentWidthSizing};
 `
 const ContentTextBox = styled.div`
   ${flex("column", "flex-start", "space-between")};
@@ -21,7 +19,7 @@ const ContentTextBox = styled.div`
 `
 const TitleContainer = styled.div`
   ${flex("row", "center", "center")};
-  ${font("dark", 48, 600)};
+  ${font("dark", 35, 600)};
   padding-bottom: 7px;
 `
 const Discription = styled.div`
@@ -39,16 +37,12 @@ const CofeButton = styled.div`
   background-color: #FFCB00;
 `
 const ImageContainer = styled.div`
+  ${flex()};
   width: ${imagePartValue}%;
   min-height: ${imageHeight}px;
-  position: relative;
 `
 const Image = styled.img`
-  position: absolute;
-  width: ${imageInnerPartValue + imageShift}%;
-  left: -${imageShift}%;
-  top: 0px;
-  bottom: 0px;
+  width: 100%;
 `
 const Piccolino = styled.div``
 const PiccolinoDiscription = styled.div``

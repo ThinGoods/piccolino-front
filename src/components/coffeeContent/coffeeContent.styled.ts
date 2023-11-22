@@ -1,10 +1,10 @@
 import styled from "styled-components"
 import { flex, font } from "../../utils/styles"
-import { headerPercentWidth } from "../../utils/constants"
+import { contentWidthSizing } from "../../utils/constants"
 
 const Content = styled.div`
   ${flex('column', 'center', 'space-between')};
-  width: ${headerPercentWidth}%;
+  ${contentWidthSizing};
 `
 const Title = styled.div`
   ${font("dark", 40, 600)};
@@ -19,3 +19,4 @@ export const S = {
   Title,
   Description,
   }
+  

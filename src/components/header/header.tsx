@@ -1,43 +1,58 @@
-import { S } from "./header.styled"
-import { IHeaderProps } from "./header.types"
 import mainLogo from '../../assets/imgs/mainLogo.png'
 import telegramIcon from '../../assets/icons/telegramIcon.svg'
 import viberIcon from '../../assets/icons/viberIcon.svg'
 import whatsupIcon from '../../assets/icons/whatsappIcon.svg'
+import burgerMenu from '../../assets/icons/burgerMenu.svg'
+import { S } from "./header.styled"
+import { IHeaderProps } from "./header.types"
 import { Menu } from '../menu/menu'
 import { AddresLine } from "../addresLine/addresLine"
 import { addresses } from "../../utils/data"
+import { useCurentScreenSize } from '../../hooks/useCurrentScreenSize/useCurentScreenSize'
 
-export const Header = (props: IHeaderProps) => {
+export const Header = ({ isHeader }: IHeaderProps) => {
+  const isFooter = !isHeader;
+  const screenSize = useCurentScreenSize();
+
   return (
-    <S.Layout isFixed={props.showMenu} >
+    <S.Layout isFixed={isHeader} >
       <S.Container>
         <S.IconBox>
-          <S.IconContainer src={mainLogo} />
+          <S.IconContainer isHeader={isHeader} src={mainLogo} />
         </S.IconBox>
 
         <S.Content>
-          <S.TopContent withMarginTop={props.showMenu} >
-            <S.Geolocation>
-              <AddresLine addres={addresses.zsu.localStreet} />
-              <S.Divider />
+          <S.TopContent withMarginTop={isHeader} >
+            {isFooter || !screenSize.isSizeM_2 ? (
+              <S.Geolocation>
+                <AddresLine addres={addresses.zsu.localStreet} />
+                {!screenSize.isSizeL ? <S.Divider /> : null}
+                <AddresLine addres={addresses.epicentr.localStreet} />
+              </S.Geolocation>
+            ) : null}
 
-              <AddresLine addres={addresses.epicentr.localStreet} />
-            </S.Geolocation>
+            <S.Contacts isHeader={isHeader}>
+              <S.PhoneGroup isHeader={isHeader}>
+                <S.ContactIconsContainer isHeader={isHeader}>
+                  <S.SocialIcon isHeader={isHeader} src={telegramIcon} />
+                  <S.SocialIcon isHeader={isHeader} src={viberIcon} />
+                  <S.SocialIcon isHeader={isHeader} src={whatsupIcon} />
+                </S.ContactIconsContainer>
 
-            <S.Contacts>
-              <S.ContactIconsContainer>
-                <S.SocialIcon src={telegramIcon} />
-                <S.SocialIcon src={viberIcon} />
-                <S.SocialIcon src={whatsupIcon} />
-              </S.ContactIconsContainer>
-
-              <S.ContactPhone>098 765 43 21</S.ContactPhone>
-              <S.ContactEmail>andriypoznansky@gmail.com</S.ContactEmail>
+                <S.ContactPhone isHeader={isHeader}>+380 98 765 43 21</S.ContactPhone>
+              </S.PhoneGroup>
+              <S.ContactEmail isHeader={isHeader}>andriypoznansky@gmail.com</S.ContactEmail>
             </S.Contacts>
+
           </S.TopContent>
-          {props.showMenu ? <Menu /> : null}
+          {isHeader && screenSize.isSizeL ? <S.BurgerMenu src={burgerMenu} /> : null}
+          {isHeader && !screenSize.isSizeL ? <Menu /> : null}
         </S.Content>
+        {isFooter && screenSize.isSizeM_2 ? <S.IconBox>
+          <S.IconContainer isHeader={isHeader} src={mainLogo} />
+        </S.IconBox> : null}
+
+
       </S.Container>
     </S.Layout>
   )

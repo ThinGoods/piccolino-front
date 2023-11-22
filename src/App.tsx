@@ -15,9 +15,9 @@ import { DevelopedBy } from "./components/developedBy/developedBy";
 function App() {
   return (
     <S.Container id={rootContainerId}>
-      <Header showMenu={true} />
+      <Header isHeader={true} />
       <S.HeaderSpacing />
-      <Greeting_page />
+      {/* <Greeting_page />
       <Spacer size={62}/>
       <OurCoffee />
       <Spacer size={150}/>
@@ -30,9 +30,9 @@ function App() {
       <Spacer size={62}/>
       <Vacancies />
       <Spacer size={54}/>
-      <GoogleReviews />
+      <GoogleReviews /> */}
       <Spacer size={59}/>
-      <Header showMenu={false} />
+      <Header isHeader={false} />
       <DevelopedBy />
     </S.Container>
   );

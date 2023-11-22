@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { colors } from "../../utils/colors"
 import { flex, font } from "../../utils/styles"
-import { headerPercentWidth } from "../../utils/constants"
+import { contentWidthSizing } from "../../utils/constants"
 
 
 const Wrapper = styled.div`
@@ -11,8 +11,8 @@ const Wrapper = styled.div`
 `
 const Container = styled.div`
   ${flex('column', 'center', 'center')};
-  width: ${headerPercentWidth}%;
   background-color: ${colors.light};
+  ${contentWidthSizing};
 `
 const Title = styled.div`
   ${font(colors.dark, 40, 600)};
