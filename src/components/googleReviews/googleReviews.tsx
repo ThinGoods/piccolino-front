@@ -1,6 +1,7 @@
 import axios, { AxiosRequestConfig } from "axios";
 import { useEffect } from "react";
 import { GOOGLE_DOMAIN } from "../../utils/constants";
+import { googleReviews } from "../../utils/menu";
 import { Spacer } from "../spacer/spacer"
 import { S } from "./googleReviews.styled"
 
@@ -55,12 +56,12 @@ export const GoogleReviews = () => {
   }, []);
 
   return (
-    <S.Container>
+    <S.Container id={googleReviews.anchor}>
       <S.Title>Відгуки</S.Title>
       <Spacer size={30} />
 
       <S.Content></S.Content>
-      <Spacer size={59} />
+      <Spacer size={60} />
     </S.Container>
   )
 }

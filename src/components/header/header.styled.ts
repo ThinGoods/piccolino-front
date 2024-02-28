@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { flex, font } from "../../utils/styles"
 import { IStyledIsHeaderProps, ITopContentProps } from "./header.types"
 import { colors } from "../../utils/colors"
-import { contentWidthSizing, headerHeightSizing, headerWidthTemplates } from "../../utils/constants"
+import { contentWidthSizing, headerHeightSizing, headerHeightTemplates } from "../../utils/constants"
 import { query } from "../../utils/mediaQueries"
 
 const IconBox = styled.div`
@@ -97,7 +97,7 @@ const Geolocation = styled.div`
   }
   @media ${query.L} {
     ${flex('column', 'flex-start', 'space-around')};
-    height: ${headerWidthTemplates.extraSmall}px;
+    height: ${headerHeightTemplates.extraSmall}px;
     width: 40%;
   }
   @media ${query.XM} {
@@ -122,7 +122,7 @@ const Contacts = styled.div<IStyledIsHeaderProps>`
   }
   @media ${query.L} {
     ${flex('column', 'flex-start', 'space-around')};
-    height: ${headerWidthTemplates.extraSmall}px;
+    height: ${headerHeightTemplates.extraSmall}px;
   }
   @media ${query.XM} {
     ${flex('column', 'flex-start', 'space-evenly')};
@@ -200,6 +200,7 @@ const SocialIcon = styled.img<IStyledIsHeaderProps>`
 
 const ContactPhone = styled.div<IStyledIsHeaderProps>`
   ${font('dark', 17, 600)};
+  
   @media ${query.XL_2} {
     font-size: 16px;
   }
@@ -237,6 +238,7 @@ const ContactPhone = styled.div<IStyledIsHeaderProps>`
 
 const ContactEmail = styled.div<IStyledIsHeaderProps>`
   ${font('dark', 16, 500)};
+  
   @media ${query.L_2} {
     font-size: 14px;
   }

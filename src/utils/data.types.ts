@@ -5,7 +5,9 @@ export interface IAdress {
 
 export interface IAdresses {
   zsu: IAdress,
+  zsu_short: IAdress,
   epicentr: IAdress,
+  epicentr_short: IAdress,
 }
 
 export interface ICoffeeItem {

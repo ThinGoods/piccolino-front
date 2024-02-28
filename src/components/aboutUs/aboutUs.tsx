@@ -1,11 +1,12 @@
 import { S } from "./aboutUs.styled"
 import andrewCoolPhoto from '../../assets/imgs/andrewCoolPhoto.png'
 import { Spacer } from "../spacer/spacer"
+import { aboutUs } from "../../utils/menu"
 
 export const AboutUs = () => {
   return (
-    <S.Container>
-      <Spacer size={126} />
+    <S.Container id={aboutUs.anchor}>
+      <Spacer size={60} />
       <S.Title>Про Piccolino</S.Title>
       <Spacer size={30} />
       <S.Description>На високих гривах гір кругом яру зеленіє старий ліс, як зелене море, вкрите хвилями.</S.Description>

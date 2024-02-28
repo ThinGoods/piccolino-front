@@ -4,6 +4,7 @@ import { S } from './partnersCoffee.styled'
 import { Spacer } from "../spacer/spacer"
 import { partnersCoffeeList } from "../../utils/data"
 import { Button } from "../button/button"
+import { partnersCoffee } from "../../utils/menu"
 
 export const PartnersCoffee = () => {
   const handleShowMore = () => {
@@ -11,17 +12,17 @@ export const PartnersCoffee = () => {
   };
 
   return (
-    <S.Content>
-
+    <S.Content id={partnersCoffee.anchor}>
+      <Spacer size={60} />
       <CoffeeContent 
         title="Кава від наших партнерів"
-        description="На високих гривах гір кругом яру зеленіє старий ліс, як зелене море, вкрите хвилями."
+        description="100% арабіка класу Specialty"
       />
       
       <S.CoffeeItemContainer>
         {partnersCoffeeList.map((elem, index) => (
           <CoffeeItem key={index} coffeeItem={elem}/>
-        ))};
+        ))}
       </S.CoffeeItemContainer>
       <Spacer size={68} />
 

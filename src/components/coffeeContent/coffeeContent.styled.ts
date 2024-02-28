@@ -11,6 +11,7 @@ const Title = styled.div`
   
 `
 const Description = styled.div`
+  ${flex()};
   ${font("dark", 16, 400)};
 `
 

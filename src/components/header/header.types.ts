@@ -1,5 +1,6 @@
 export interface IHeaderProps {
   isHeader: boolean;
+  showBackdrop?(): void;
 }
 export interface ITopContentProps {
   withMarginTop: boolean;

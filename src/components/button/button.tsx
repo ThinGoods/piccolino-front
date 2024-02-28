@@ -1,14 +1,14 @@
 import { S } from "./button.style"
 import { IButton } from "./button.type"
 
-export const Button = ({text, onClick, withTouchableArea = false,}:IButton) => {
+export const Button = ({text, onClick, withTouchableArea = false}:IButton) => {
 
   return (
-    <S.Button 
+    <S.ButtonContainer
       withPaddings={withTouchableArea} 
       onClick={onClick}
     >
       {text}
-    </S.Button>
+    </S.ButtonContainer>
   )
 }

@@ -1,49 +1,19 @@
+import { menuItems } from "../../utils/menu"
+import { handleMenuItemClick } from "../../utils/navigations"
 import { S } from "./menu.styled"
-import { IItem, IMenuProps} from "./menu.types"
+import { IMenuProps } from "./menu.types"
 
 export const Menu = (props: IMenuProps) => {
+
   return (
       <S.MenuContainer>
         {menuItems.map((item) => (
-          <S.MenuItem key={item.id}>
+          <S.MenuItem 
+            key={item.id} 
+            onClick={handleMenuItemClick(item.anchor)}>
             {item.text}
           </S.MenuItem>
         ))}
       </S.MenuContainer>
     )
 }
-
-const menuItems: Array<IItem> = [
-  {
-    id:1,
-    text: "Наша кава"
-  },
-  {
-    id:2,
-    text: "Від партнерів"
-  },
-  {
-    id:3,
-    text: "Де нас знайти "
-  },
-  {
-    id:4,
-    text: "Про Піколіно"
-  },
-  {
-    id:5,
-    text: "Ми в інстаграм"
-  },
-  {
-    id:6,
-    text: "Вакансії"
-  },
-  {
-    id:7,
-    text: "Відгуки"
-  },
-  {
-    id:8,
-    text: "Контакти"
-  }
-];

@@ -9,27 +9,45 @@ import { Menu } from '../menu/menu'
 import { AddresLine } from "../addresLine/addresLine"
 import { addresses } from "../../utils/data"
 import { useCurentScreenSize } from '../../hooks/useCurrentScreenSize/useCurentScreenSize'
+import { goToAnchor } from '../../utils/navigations'
+import { greetingPage } from '../../utils/menu'
 
-export const Header = ({ isHeader }: IHeaderProps) => {
+export const Header = ({ isHeader, showBackdrop }: IHeaderProps) => {
   const isFooter = !isHeader;
   const screenSize = useCurentScreenSize();
+
+  const renderGeolocation = () => {
+    if (isFooter || !screenSize.isSizeM_2) {
+      return (
+        <S.Geolocation>
+          <AddresLine addres={addresses.zsu.localStreet} />
+          {!screenSize.isSizeL ? <S.Divider /> : null}
+          <AddresLine addres={addresses.epicentr.localStreet} />
+        </S.Geolocation>
+      )
+    } else {
+      return null
+      }
+    }
+
+  const openMobileMenu = () => {
+    if (showBackdrop) {
+      showBackdrop()
+    };
+  }
+  const handleAnchorClick = () => goToAnchor(greetingPage);
+  
 
   return (
     <S.Layout isFixed={isHeader} >
       <S.Container>
         <S.IconBox>
-          <S.IconContainer isHeader={isHeader} src={mainLogo} />
+          <S.IconContainer isHeader={isHeader} src={mainLogo} onClick={handleAnchorClick}/>
         </S.IconBox>
 
         <S.Content>
           <S.TopContent withMarginTop={isHeader} >
-            {isFooter || !screenSize.isSizeM_2 ? (
-              <S.Geolocation>
-                <AddresLine addres={addresses.zsu.localStreet} />
-                {!screenSize.isSizeL ? <S.Divider /> : null}
-                <AddresLine addres={addresses.epicentr.localStreet} />
-              </S.Geolocation>
-            ) : null}
+          {renderGeolocation()}
 
             <S.Contacts isHeader={isHeader}>
               <S.PhoneGroup isHeader={isHeader}>
@@ -45,14 +63,12 @@ export const Header = ({ isHeader }: IHeaderProps) => {
             </S.Contacts>
 
           </S.TopContent>
-          {isHeader && screenSize.isSizeL ? <S.BurgerMenu src={burgerMenu} /> : null}
+          {isHeader && screenSize.isSizeL ? <S.BurgerMenu src={burgerMenu} onClick={openMobileMenu}/> : null}
           {isHeader && !screenSize.isSizeL ? <Menu /> : null}
         </S.Content>
         {isFooter && screenSize.isSizeM_2 ? <S.IconBox>
-          <S.IconContainer isHeader={isHeader} src={mainLogo} />
+          <S.IconContainer isHeader={isHeader} src={mainLogo} onClick={handleAnchorClick}/>
         </S.IconBox> : null}
-
-
       </S.Container>
     </S.Layout>
   )

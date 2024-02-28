@@ -27,6 +27,7 @@ export function InstagramPostsGrid (props: IInstagramPostsGridProps) {
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   const getInstagramImages = async () => {
+    console.log(process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN)
     try {
       const requestConfig: AxiosRequestConfig<any> = {
         params: {

@@ -5,7 +5,7 @@ import { flex } from "./utils/styles"
 
 const Container = styled.div`
   width: 100%;
-  min-height: 1080px;
+  min-height: ${window.innerHeight}px;
   background-color: ${colors.grey};
   ${flex("column", "center", "flex-start")}
 `

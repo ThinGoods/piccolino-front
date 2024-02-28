@@ -29,21 +29,36 @@ export const contentWidthSizing = `
     width: ${contentWidthTemplates.extraSmall}%;
   }
 `
-export const headerWidthTemplates = {
+
+export const textPartValuesTemplate = {
+  general: 40,
+  generalPlus: 45,
+  half: 50,
+}
+
+export const headerHeightTemplates = {
   general: 150,
   small: 127,
   extraSmall: 97, 
 }
 
+export const calculateHeaderHeight = (): number => {
+  const screenWidth = window.innerWidth;
+  const { general, small, extraSmall } = headerHeightTemplates;
+  
+  if (screenWidth > ScreenSizes.XL) return general
+  else if (screenWidth > ScreenSizes.L) return small
+  else return extraSmall
+}
+
 export const headerHeightSizing = `
-  min-height: ${headerWidthTemplates.general}px;
+  min-height: ${headerHeightTemplates.general}px;
   @media ${query.XL} {
-    min-height: ${headerWidthTemplates.small}px;
+    min-height: ${headerHeightTemplates.small}px;
   }
   @media ${query.L} {
-    min-height: ${headerWidthTemplates.extraSmall}px;
+    min-height: ${headerHeightTemplates.extraSmall}px;
   }
-  
 `
 
 export const rootContainerId = 'halohenovuy';

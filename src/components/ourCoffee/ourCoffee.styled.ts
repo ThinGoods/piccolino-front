@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { contentWidthSizing } from "../../utils/constants"
+import { query } from "../../utils/mediaQueries"
 import { font, flex } from "../../utils/styles"
 
 const Content = styled.div`
@@ -17,6 +18,9 @@ const CoffeeItemContainer = styled.div`
   ${flex('row', 'center', 'space-between')};
   flex-wrap: wrap;
   width: 100%;
+  @media ${query.M_2} {
+    ${flex('column', 'center', 'center')};
+  }
 ` 
 export const S = {
   Content,

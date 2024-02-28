@@ -11,27 +11,42 @@ import { rootContainerId } from "./utils/constants";
 import { Vacancies } from "./components/vacancies/vacancies";
 import { GoogleReviews } from "./components/googleReviews/googleReviews";
 import { DevelopedBy } from "./components/developedBy/developedBy";
+import { useState } from "react";
+import { Backdrop } from "./components/backdrop/backdrop";
+import { useCurrentSpacerSize } from "./hooks/useCurrentScreenSize/useCurrentSpacerSize";
 
 function App() {
+  const [isBackdropVisible, setIsBackdropVisible] = useState(false);
+
+  const showBackdrop = () => {
+    setIsBackdropVisible(true);
+  }
+  const hideBackdrop = () => {
+    setIsBackdropVisible(false);
+  }
+
+  const spacer = useCurrentSpacerSize();
   return (
     <S.Container id={rootContainerId}>
-      <Header isHeader={true} />
+
+      <Backdrop visible={isBackdropVisible} hideBackdrop={hideBackdrop}/>
+      <Header isHeader={true} showBackdrop={showBackdrop}/>
       <S.HeaderSpacing />
-      {/* <Greeting_page />
-      <Spacer size={62}/>
+      <Greeting_page />
       <OurCoffee />
-      <Spacer size={150}/>
+      <Spacer size={spacer}/>
       <PartnersCoffee />
-      <Spacer size={150}/>
+      <Spacer size={spacer*2}/>
       <WhereToFindUs />
+      <Spacer size={spacer}/> 
       <AboutUs/>
-      <Spacer size={150}/>
+      <Spacer size={spacer}/> 
       <InstagramPage />
-      <Spacer size={62}/>
+      <Spacer size={spacer}/>
       <Vacancies />
-      <Spacer size={54}/>
-      <GoogleReviews /> */}
-      <Spacer size={59}/>
+      <Spacer size={spacer}/>
+      <GoogleReviews />
+      <Spacer size={spacer}/>
       <Header isHeader={false} />
       <DevelopedBy />
     </S.Container>

@@ -1,9 +1,16 @@
 import { S } from "./greeting_page.styled"
 import greetingImage from "../../assets/imgs/greeting_page_Image.png"
+import { goToAnchor } from "../../utils/navigations"
+import { greetingPage, ourCofee } from "../../utils/menu"
 
 export const Greeting_page = () => {
+  const handleAnchorClick = () => {
+    goToAnchor(ourCofee.anchor)
+  }
+  
+
   return (
-    <S.Content>
+    <S.Content id={greetingPage}>
       <S.ContentTextBox>
         <S.TitleContainer>
           <S.Piccolino>Piccolino</S.Piccolino>
@@ -11,7 +18,7 @@ export const Greeting_page = () => {
         </S.TitleContainer>
 
         <S.Discription>Свіжообсмажена кава у Сумах</S.Discription>
-        <S.CofeButton>Обрати каву</S.CofeButton>
+        <S.CofeButton onClick={handleAnchorClick}>Обрати каву</S.CofeButton>
       </S.ContentTextBox>
 
       <S.ImageContainer>
@@ -19,4 +26,4 @@ export const Greeting_page = () => {
       </S.ImageContainer>
     </S.Content>
   )
-} 
+}

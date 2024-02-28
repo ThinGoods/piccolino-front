@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { colors } from "../../utils/colors"
 import { flex, font } from "../../utils/styles"
 import { contentWidthSizing } from "../../utils/constants"
+import { query } from "../../utils/mediaQueries"
 
 
 const Wrapper = styled.div`
@@ -25,6 +26,9 @@ const Content = styled.div`
 `
 const BusPhoto = styled.img`
   width: 45%;
+  @media ${query.L} {
+    width: 35%;
+  }
 `
 const ContentBox = styled.div`
   margin-left: 22px;
@@ -43,7 +47,10 @@ const MapButton = styled.div`
 `
 const LocationContainer = styled.div `
   ${flex('row', 'center', 'flex-start')};
-  
+
+  /* @media ${query.M_1} {
+    ${flex('row', 'center', 'center')};
+  } */
 `
 const AddressContainer = styled.div`
   ${flex('column', 'flex-start', 'flex-start')};
@@ -54,7 +61,12 @@ const MapButtonContainer = styled.div`
   line-height: 24px;
   padding-left: 50px;
   width: 100%;
-  /* background-color: red; */
+
+  @media ${query.M_1} {
+    ${flex('column', 'center', 'flex-start')};
+    padding-left: 30px;
+    
+  }
 `
 export const S = {
   Wrapper,

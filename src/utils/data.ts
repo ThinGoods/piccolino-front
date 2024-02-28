@@ -9,14 +9,23 @@ export const addresses: IAdresses = {
     mapUrl: 'https://maps.app.goo.gl/p5HyAnebDEKj4HF67',
     localStreet: 'вул. Збройних Сил України 51В',
   },
+  zsu_short: {
+    mapUrl: 'https://maps.app.goo.gl/p5HyAnebDEKj4HF67',
+    localStreet: 'вул. ЗСУ 51В',
+  },
   epicentr: {
     mapUrl: 'https://maps.app.goo.gl/8yRBWokFB4FJPrzh9',
     localStreet: 'вул. Героїв Крут 1/3 (Епіцентр)',
-  }
+  },
+  epicentr_short: {
+    mapUrl: 'https://maps.app.goo.gl/8yRBWokFB4FJPrzh9',
+    localStreet: 'Епіцентр',
+  },
 }
 
 export const linkedInUrl: string = 'https://www.linkedin.com/in/stas-vashchenko/';
-export const developerName: string = 'Vasya Ytkin';
+export const developerName: string = 'Stas Vashchenko';
+export const piccolinoInstagramURL: string = 'https://www.instagram.com/piccolino_coffee/';
 
 export const coffeeItem: ICoffeeItem = {
   id: 1,
