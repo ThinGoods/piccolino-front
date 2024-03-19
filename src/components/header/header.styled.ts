@@ -4,6 +4,7 @@ import { IStyledIsHeaderProps, ITopContentProps } from "./header.types"
 import { colors } from "../../utils/colors"
 import { contentWidthSizing, headerHeightSizing, headerHeightTemplates } from "../../utils/constants"
 import { query } from "../../utils/mediaQueries"
+import { Link } from "../../utils/styledComponentsBase"
 
 const IconBox = styled.div`
   margin-right: 24px;
@@ -162,6 +163,7 @@ const ContactIconsContainer = styled.div<IStyledIsHeaderProps>`
 `
 const SocialIcon = styled.img<IStyledIsHeaderProps>`
   padding: 5px;
+  cursor: pointer;
 
   @media ${query.XL} {
     width: 20px;
@@ -198,8 +200,8 @@ const SocialIcon = styled.img<IStyledIsHeaderProps>`
   }
 `
 
-const ContactPhone = styled.div<IStyledIsHeaderProps>`
-  ${font('dark', 17, 600)};
+const ContactPhone = styled(Link)<IStyledIsHeaderProps>`
+  ${font(colors.dark, 17, 600)}
   
   @media ${query.XL_2} {
     font-size: 16px;
@@ -236,9 +238,9 @@ const ContactPhone = styled.div<IStyledIsHeaderProps>`
   }
 `
 
-const ContactEmail = styled.div<IStyledIsHeaderProps>`
-  ${font('dark', 16, 500)};
-  
+const ContactEmail = styled(Link)<IStyledIsHeaderProps>`
+  ${font(colors.dark, 16, 500)}
+
   @media ${query.L_2} {
     font-size: 14px;
   }
@@ -288,6 +290,7 @@ const PhoneGroup = styled.div<IStyledIsHeaderProps>`
 `
 const BurgerMenu = styled.img`
   width: 40px;
+  
   @media ${query.M_1} {
     width: 30px;
   }

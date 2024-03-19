@@ -24,13 +24,13 @@ export const WhereToFindUs = () => {
 
   const epicAddress = 
     screenSize.isSizeM 
-      ? addresses.epicentr_short.localStreet 
-      : addresses.epicentr.localStreet;
+      ? addresses.epicentr_short 
+      : addresses.epicentr;
 
   const zsuAddress =
     screenSize.isSizeM 
-      ? addresses.zsu_short.localStreet 
-      : addresses.zsu.localStreet;
+      ? addresses.zsu_short 
+      : addresses.zsu;
   
   return (
     <S.Wrapper id={whereToFindUs.anchor}>
@@ -50,9 +50,9 @@ export const WhereToFindUs = () => {
             <Spacer size={30} />
             <S.LocationContainer>
               <S.AddressContainer>
-                <AddresLine addres={ epicAddress } />
+                <AddresLine location={epicAddress}/>
                 <Spacer size={30} />
-                <AddresLine addres={ zsuAddress } />
+                <AddresLine location={zsuAddress}/>
               </S.AddressContainer>
               <Spacer size={35} />
 

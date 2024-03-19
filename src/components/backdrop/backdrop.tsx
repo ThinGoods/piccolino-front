@@ -16,13 +16,13 @@ export const Backdrop = ({visible, hideBackdrop}:IBackdropProps) => {
     return null
   }
 
-  const action = () => {
+  const hideBackDrop = () => {
     setOpacity(0);
-    setTimeout(hideBackdrop, 300);
+    setTimeout(hideBackdrop, 200);
   }
   return (
 
-    <S.Container onClick={action} opacity={opacity}> 
+    <S.Container onClick={hideBackDrop} opacity={opacity}>
   
       <S.MenuContainer>
         {menuItems.map((item) => (

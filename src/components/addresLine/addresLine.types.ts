@@ -1,3 +1,5 @@
+import { IAdress } from "../../utils/data.types";
+
 export interface IAddresLineProps {
-  addres: string;
+  location: IAdress,
 }

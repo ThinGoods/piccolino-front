@@ -24,11 +24,19 @@ const Title = styled.div`
   }
 `
 const InstagramLink = styled.div`
+  ${font(colors.yellow, 40, 600)};
+  transition: 400ms;
+  cursor: pointer;
+
+  &:hover {
+    color: ${colors.darkYellow};
+  }
+
   @media ${query.XM} {
-      ${font(colors.dark, 30, 600)};
+      ${font(colors.yellow, 30, 600)};
   }
   @media ${query.M_2} {
-      ${font(colors.dark, 25, 600)};
+      ${font(colors.yellow, 25, 600)};
   }
 `
 const Content = styled.div``

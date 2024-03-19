@@ -25,7 +25,12 @@ export const addresses: IAdresses = {
 
 export const linkedInUrl: string = 'https://www.linkedin.com/in/stas-vashchenko/';
 export const developerName: string = 'Stas Vashchenko';
+
 export const piccolinoInstagramURL: string = 'https://www.instagram.com/piccolino_coffee/';
+export const piccolinoEmail: string = 'andriypoznansky@gmail.com';
+export const piccolinoPhone: string = '+380 95 040 1234';
+export const piccolinoTelegramLink: string = 'https://t.me/andreapiccoloua';
+export const piccolinoViberLink: string = 'viber://contact?number=%2B380950401234';
 
 export const coffeeItem: ICoffeeItem = {
   id: 1,

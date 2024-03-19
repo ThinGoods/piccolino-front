@@ -1,10 +1,11 @@
 import styled from "styled-components"
+import { colors } from "../../utils/colors"
 import { query } from "../../utils/mediaQueries"
 import { flex, font } from '../../utils/styles'
-import { IStyledIsHeaderProps } from "../header/header.types"
 
 const GeolocationItem = styled.div`
   ${flex('row', 'center', 'space-between')};
+  cursor: pointer;
 `
 const Icon = styled.img`
   margin-right: 19px;
@@ -28,7 +29,7 @@ const Icon = styled.img`
   }
 `
 const Addres = styled.div`
-  ${font('dark', 14, 600)};
+  ${font(colors.dark, 14, 600)};
   text-wrap: nowrap;
 
   @media ${query.L_2} {

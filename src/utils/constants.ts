@@ -1,3 +1,4 @@
+import styled from "styled-components";
 import { query, ScreenSizes } from "./mediaQueries";
 
 const contentWidthTemplates = {
@@ -64,7 +65,6 @@ export const headerHeightSizing = `
 export const rootContainerId = 'halohenovuy';
 export const INSTAGRAM_DOMAIN = 'https://graph.instagram.com/me/media';
 export const GOOGLE_DOMAIN = 'https://maps.googleapis.com/maps/api/place/details/json';
-
 
 // let name; // author_name
 // let avatarPicture; // profile_photo_url

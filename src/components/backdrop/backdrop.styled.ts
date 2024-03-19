@@ -8,7 +8,7 @@ const Container = styled.div <{ opacity: number }>`
   ${flex('row', 'center', 'flex-end')};
   ${({opacity}) => (
     `opacity: ${opacity};`
-  )}
+  )};
   transition: 0.3s;
 
   background-color: ${colors.darkGrey}99;
@@ -39,7 +39,7 @@ const MenuContainer = styled.div`
 `
 const MenuItem = styled.div`
   ${flex('column', 'center', 'center')}
-  ${font('dark', 16, 600)}
+  ${font(colors.dark, 16, 600)}
   background-color: ${colors.yellow};
   padding: 0px 0px 0px 0px ;
   margin-bottom: 5px;
@@ -48,6 +48,11 @@ const MenuItem = styled.div`
   position: relative;
   border-radius: 10px;
   transition: 350ms;
+  /* cursor: pointer;
+
+  :hover {
+    background-color: ${colors.light};
+  } */
 `
 
 export const S = {

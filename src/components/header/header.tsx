@@ -7,10 +7,13 @@ import { S } from "./header.styled"
 import { IHeaderProps } from "./header.types"
 import { Menu } from '../menu/menu'
 import { AddresLine } from "../addresLine/addresLine"
-import { addresses } from "../../utils/data"
+import { addresses, piccolinoEmail, piccolinoPhone, piccolinoTelegramLink, piccolinoViberLink } from "../../utils/data"
 import { useCurentScreenSize } from '../../hooks/useCurrentScreenSize/useCurentScreenSize'
-import { goToAnchor } from '../../utils/navigations'
+import { goToAnchor, openNewTab } from '../../utils/navigations'
 import { greetingPage } from '../../utils/menu'
+
+const mailToVariable = "mailto:" + piccolinoEmail;
+const phoneToVariable = "tel:" + piccolinoPhone;
 
 export const Header = ({ isHeader, showBackdrop }: IHeaderProps) => {
   const isFooter = !isHeader;
@@ -20,9 +23,9 @@ export const Header = ({ isHeader, showBackdrop }: IHeaderProps) => {
     if (isFooter || !screenSize.isSizeM_2) {
       return (
         <S.Geolocation>
-          <AddresLine addres={addresses.zsu.localStreet} />
+          <AddresLine location={addresses.zsu} />
           {!screenSize.isSizeL ? <S.Divider /> : null}
-          <AddresLine addres={addresses.epicentr.localStreet} />
+          <AddresLine location={addresses.epicentr} />
         </S.Geolocation>
       )
     } else {
@@ -36,8 +39,10 @@ export const Header = ({ isHeader, showBackdrop }: IHeaderProps) => {
     };
   }
   const handleAnchorClick = () => goToAnchor(greetingPage);
+  const handleTelegramIconClick = () => openNewTab(piccolinoTelegramLink);
+  const handleViberIconClick = () => openNewTab(piccolinoViberLink);
+  const handleWhatsupIconClick = () => openNewTab(phoneToVariable);
   
-
   return (
     <S.Layout isFixed={isHeader} >
       <S.Container>
@@ -52,14 +57,14 @@ export const Header = ({ isHeader, showBackdrop }: IHeaderProps) => {
             <S.Contacts isHeader={isHeader}>
               <S.PhoneGroup isHeader={isHeader}>
                 <S.ContactIconsContainer isHeader={isHeader}>
-                  <S.SocialIcon isHeader={isHeader} src={telegramIcon} />
-                  <S.SocialIcon isHeader={isHeader} src={viberIcon} />
-                  <S.SocialIcon isHeader={isHeader} src={whatsupIcon} />
+                  <S.SocialIcon isHeader={isHeader} src={telegramIcon} onClick={handleTelegramIconClick}/>
+                  <S.SocialIcon isHeader={isHeader} src={viberIcon} onClick={handleViberIconClick}/>
+                  <S.SocialIcon isHeader={isHeader} src={whatsupIcon} onClick={handleWhatsupIconClick}/>
                 </S.ContactIconsContainer>
 
-                <S.ContactPhone isHeader={isHeader}>+380 98 765 43 21</S.ContactPhone>
+                <S.ContactPhone isHeader={isHeader} href={phoneToVariable}>{piccolinoPhone}</S.ContactPhone>
               </S.PhoneGroup>
-              <S.ContactEmail isHeader={isHeader}>andriypoznansky@gmail.com</S.ContactEmail>
+              <S.ContactEmail isHeader={isHeader} href={mailToVariable}>{piccolinoEmail}</S.ContactEmail>
             </S.Contacts>
 
           </S.TopContent>

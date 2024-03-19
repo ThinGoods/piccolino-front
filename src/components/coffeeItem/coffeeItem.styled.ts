@@ -17,16 +17,16 @@ const Description = styled.div`
   ${flex('column', 'center', 'center')};
 `
 const Country = styled.div`
-  ${font('dark', 20, 600)};
+  ${font(colors.dark, 20, 600)};
 `
 const Region = styled.div`
-  ${font('dark', 14, 500)};
+  ${font(colors.dark, 14, 500)};
 `
 const Descriptors = styled.div`
-  ${font('dark', 14, 400)};
+  ${font(colors.dark, 14, 400)};
 `
 const Parameters = styled.div`
-  ${font('dark', 12, 400)};
+  ${font(colors.dark, 12, 400)};
   width: 90%;
 `
 const Lable = styled.div`
@@ -46,13 +46,13 @@ const WeightAndPriceBox = styled.div`
   width: 100%;
 `
 const Price = styled.div`
-  ${font('dark', 16, 600)};
+  ${font(colors.dark, 16, 600)};
 `
 const UahIcon = styled.img`
   width: 24px;
 `
 const Weight = styled.div`
-  ${font('dark', 12, 400)};
+  ${font(colors.dark, 12, 400)};
 `
 const OrderBox = styled.div`
   ${font( colors.darkOrage, 16, 500)};

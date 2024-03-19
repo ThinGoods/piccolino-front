@@ -11,7 +11,7 @@ const MenuContainer = styled.div`
   padding-bottom: 21px;
 `
 const MenuItem = styled.div`
-  ${font('dark', 16, 600)};
+  ${font(colors.dark, 16, 600)};
   ${flex()};
   padding-left: 24px;
   padding-right: 24px;
