@@ -7,11 +7,7 @@ import { capitalize } from "../../utils/string"
 export const CoffeeItem = (props: ICoffeeItemProps) => {
   const { coffeeItem } = props;
   let toUpperCaseFirstLetter = coffeeItem.descriptors.map(elem => capitalize(elem));
-
-  // let a = coffeeItem.descriptors.map(capitalize);
-  // let toUpperCaseFirstLetter1 = coffeeItem.descriptors.map( (elem) => { return capitalize(elem) } );
-
-  const descriptorsString = toUpperCaseFirstLetter.join(", ")
+  const descriptorsString = toUpperCaseFirstLetter.join(", ");
 
   return (
     <S.Wraper>
@@ -74,6 +70,5 @@ export const CoffeeItem = (props: ICoffeeItemProps) => {
       </S.Content>
       <Spacer size={20} />
     </S.Wraper>
-
   )
 }

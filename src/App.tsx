@@ -14,6 +14,7 @@ import { DevelopedBy } from "./components/developedBy/developedBy";
 import { useState } from "react";
 import { Backdrop } from "./components/backdrop/backdrop";
 import { useCurrentSpacerSize } from "./hooks/useCurrentScreenSize/useCurrentSpacerSize";
+import { Usertest } from "./components/usertest/usertest";
 
 function App() {
   const [isBackdropVisible, setIsBackdropVisible] = useState(false);
@@ -49,6 +50,7 @@ function App() {
       <Spacer size={spacer}/>
       <Header isHeader={false} />
       <DevelopedBy />
+      <Usertest />
     </S.Container>
   );
 }

@@ -11,7 +11,7 @@ export interface IAdresses {
 }
 
 export interface ICoffeeItem {
-  id: number,
+  _id: number,
   img: any,
   country: string,
   region: string,
@@ -23,6 +23,7 @@ export interface ICoffeeItem {
   score: number,
   price: number,
   weight: number,
+  isPartnership: boolean
 }
 
 type TCoffeeType = 'мелена' | 'зерно';

@@ -7,7 +7,7 @@ import { IInstagramPostsGridProps, IInstDataItem } from "./instagramPostsGrid.ty
 
 
 export function InstagramPostsGrid (props: IInstagramPostsGridProps) {
-  const [instData, setInstData] = useState<Array<IInstDataItem>>([]);
+  
 
   //                                             THEN ___ CATCH EXAMPLE
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ export function InstagramPostsGrid (props: IInstagramPostsGridProps) {
   //   .catch((error) => console.log("Error while getting instagram images ",error))
   // }, []);
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+  const [instData, setInstData] = useState<Array<IInstDataItem>>([]);
   const getInstagramImages = async () => {
     console.log(process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN)
     try {
@@ -35,7 +35,7 @@ export function InstagramPostsGrid (props: IInstagramPostsGridProps) {
           access_token: process.env.REACT_APP_INSTAGRAM_ACCESS_TOKEN,
         }
       };
-
+      
       const response = await axios.get(INSTAGRAM_DOMAIN, requestConfig);
       const rawArray = response.data.data;
       const filteredArray = rawArray.filter((element: IInstDataItem) => element.media_type === "IMAGE");
